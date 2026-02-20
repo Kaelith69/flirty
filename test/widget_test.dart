@@ -1,30 +1,38 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:nerd_gpt/main.dart';
+import 'package:nerd_gpt/screens/home_screen.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('HomeScreen shows initial greeting', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: HomeScreen(title: 'Pluto')),
+    );
+    expect(find.text('Hello Dear'), findsOneWidget);
+  });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('HomeScreen shows app title', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: HomeScreen(title: 'Pluto')),
+    );
+    expect(find.text('Pluto'), findsOneWidget);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+  testWidgets('Send button is hidden when input is empty',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: HomeScreen(title: 'Pluto')),
+    );
+    expect(find.byType(ElevatedButton), findsNothing);
+  });
+
+  testWidgets('Send button appears when text is entered',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: HomeScreen(title: 'Pluto')),
+    );
+    await tester.enterText(find.byType(TextField), 'Hello');
     await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.byType(ElevatedButton), findsOneWidget);
   });
 }
