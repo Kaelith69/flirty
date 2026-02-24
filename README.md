@@ -73,21 +73,7 @@
 
 ---
 
-## 🎬 Live Demo
 
-> Place demo GIF here: `assets/demo.gif`
-
-![Demo](assets/demo.gif)
-
-> **What the GIF should show:**
-> 1. App launching on a dark-themed screen
-> 2. User typing a message into the input field
-> 3. Toggle switching between 💘 Cupid and 🧠 G Man modes
-> 4. The send button appearing as text is entered
-> 5. Loading spinner while Gemini processes
-> 6. AI response appearing in the response card
-
----
 
 ## 🌐 System Overview
 
