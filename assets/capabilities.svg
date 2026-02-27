@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="500" viewBox="0 0 820 500">
+  <rect width="820" height="500" fill="#1C1B1F"/>
+
+  <!-- Title -->
+  <text x="410" y="36" font-family="Arial, sans-serif" font-size="17" font-weight="700"
+    fill="#A855F7" text-anchor="middle" letter-spacing="2">CAPABILITIES</text>
+  <line x1="200" y1="46" x2="620" y2="46" stroke="#7C3AED" stroke-width="1" opacity="0.5"/>
+
+  <!-- Column headers -->
+  <text x="290" y="68" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle" letter-spacing="1">FEATURE</text>
+  <text x="560" y="68" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle" letter-spacing="1">WHAT IT DOES</text>
+  <text x="730" y="68" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle" letter-spacing="1">STATUS</text>
+  <line x1="30" y1="74" x2="790" y2="74" stroke="#2D2D2D" stroke-width="1"/>
+
+  <!-- ── ROW 1: Cupid Mode ── -->
+  <rect x="30" y="82" width="760" height="52" rx="6" fill="#1F0A30" opacity="0.8"/>
+  <!-- icon: heart -->
+  <path d="M 72 102 C 72 96, 79 92, 84 98 C 89 92, 96 96, 96 102 C 96 111, 84 120, 84 120 C 84 120, 72 111, 72 102 Z"
+    fill="#EC4899" transform="scale(0.65) translate(46, 38)"/>
+  <text x="105" y="104" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#EC4899">Cupid Mode</text>
+  <text x="105" y="120" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">Romantic pickup line generation</text>
+  <text x="430" y="112" font-family="Arial, sans-serif" font-size="11" fill="#D1D5DB" text-anchor="middle">Sends a system prompt requesting a romantic flirty reply via Gemini 1.5 Flash; switches app chrome to purple</text>
+  <!-- status: implemented -->
+  <rect x="680" y="93" width="100" height="24" rx="12" fill="#0D3320"/>
+  <circle cx="696" cy="105" r="5" fill="#22C55E"/>
+  <text x="730" y="110" font-family="Arial, sans-serif" font-size="11" fill="#22C55E" text-anchor="middle">Shipped</text>
+
+  <!-- ── ROW 2: G Man Mode ── -->
+  <rect x="30" y="142" width="760" height="52" rx="6" fill="#0E1A0E" opacity="0.8"/>
+  <!-- icon: brain (simple circle + lines) -->
+  <circle cx="84" cy="168" r="12" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
+  <line x1="84" y1="156" x2="84" y2="168" stroke="#22D3EE" stroke-width="1"/>
+  <line x1="76" y1="161" x2="84" y2="168" stroke="#22D3EE" stroke-width="1"/>
+  <line x1="92" y1="161" x2="84" y2="168" stroke="#22D3EE" stroke-width="1"/>
+  <text x="105" y="164" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#22D3EE">G Man Mode</text>
+  <text x="105" y="180" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">Witty intellectual reply generation</text>
+  <text x="430" y="172" font-family="Arial, sans-serif" font-size="11" fill="#D1D5DB" text-anchor="middle">Switches prompt to request a highly intelligent witty response; app chrome turns green</text>
+  <rect x="680" y="153" width="100" height="24" rx="12" fill="#0D3320"/>
+  <circle cx="696" cy="165" r="5" fill="#22C55E"/>
+  <text x="730" y="170" font-family="Arial, sans-serif" font-size="11" fill="#22C55E" text-anchor="middle">Shipped</text>
+
+  <!-- ── ROW 3: Mode Toggle ── -->
+  <rect x="30" y="202" width="760" height="52" rx="6" fill="#1A1A2E" opacity="0.8"/>
+  <!-- icon: toggle -->
+  <rect x="68" y="188" width="32" height="18" rx="9" fill="#7C3AED"/>
+  <circle cx="88" cy="197" r="7" fill="white"/>
+  <text x="105" y="224" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#A855F7">Mode Toggle</text>
+  <text x="105" y="240" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">SwitcherButton widget</text>
+  <text x="430" y="232" font-family="Arial, sans-serif" font-size="11" fill="#D1D5DB" text-anchor="middle">Single tap flips between Cupid and G Man; rebuilds AppBar color and prompt template instantly</text>
+  <rect x="680" y="213" width="100" height="24" rx="12" fill="#0D3320"/>
+  <circle cx="696" cy="225" r="5" fill="#22C55E"/>
+  <text x="730" y="230" font-family="Arial, sans-serif" font-size="11" fill="#22C55E" text-anchor="middle">Shipped</text>
+
+  <!-- ── ROW 4: Input Guard ── -->
+  <rect x="30" y="262" width="760" height="52" rx="6" fill="#1A1510" opacity="0.8"/>
+  <!-- icon: shield -->
+  <path d="M84,253 L68,258 L68,272 Q68,282 84,288 Q100,282 100,272 L100,258 Z"
+    fill="none" stroke="#F59E0B" stroke-width="1.5" transform="scale(0.75) translate(26,74)"/>
+  <text x="105" y="284" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#F59E0B">Input Guard</text>
+  <text x="105" y="300" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">500-char cap + empty-state lock</text>
+  <text x="430" y="292" font-family="Arial, sans-serif" font-size="11" fill="#D1D5DB" text-anchor="middle">Trims input to 500 chars before sending; send button hidden until input is non-empty</text>
+  <rect x="680" y="273" width="100" height="24" rx="12" fill="#0D3320"/>
+  <circle cx="696" cy="285" r="5" fill="#22C55E"/>
+  <text x="730" y="290" font-family="Arial, sans-serif" font-size="11" fill="#22C55E" text-anchor="middle">Shipped</text>
+
+  <!-- ── ROW 5: Cross-Platform ── -->
+  <rect x="30" y="322" width="760" height="52" rx="6" fill="#0E1820" opacity="0.8"/>
+  <!-- icon: devices (3 rectangles) -->
+  <rect x="68" y="326" width="10" height="14" rx="1" fill="#22D3EE" opacity="0.7"/>
+  <rect x="80" y="322" width="14" height="18" rx="1" fill="#22D3EE"/>
+  <rect x="96" y="330" width="8" height="10" rx="1" fill="#22D3EE" opacity="0.6"/>
+  <text x="115" y="344" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#22D3EE">Cross-Platform</text>
+  <text x="115" y="360" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">Android · iOS · Web · Linux · macOS · Windows</text>
+  <text x="430" y="352" font-family="Arial, sans-serif" font-size="11" fill="#D1D5DB" text-anchor="middle">Single Flutter codebase targets all six platforms with no platform-specific UI branches</text>
+  <rect x="680" y="333" width="100" height="24" rx="12" fill="#0D3320"/>
+  <circle cx="696" cy="345" r="5" fill="#22C55E"/>
+  <text x="730" y="350" font-family="Arial, sans-serif" font-size="11" fill="#22C55E" text-anchor="middle">Shipped</text>
+
+  <!-- ── ROW 6: Copy to Clipboard ── (planned) -->
+  <rect x="30" y="382" width="760" height="52" rx="6" fill="#141414" opacity="0.8"/>
+  <!-- icon: clipboard -->
+  <rect x="70" y="385" width="14" height="18" rx="2" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+  <line x1="74" y1="385" x2="80" y2="385" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="105" y="404" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#6B7280">Copy to Clipboard</text>
+  <text x="105" y="420" font-family="Arial, sans-serif" font-size="10" fill="#4B5563">Tap response to copy AI text</text>
+  <text x="430" y="412" font-family="Arial, sans-serif" font-size="11" fill="#4B5563" text-anchor="middle">Long-press or tap-to-copy on the response card for easy sharing</text>
+  <rect x="680" y="393" width="100" height="24" rx="12" fill="#1C1C1C"/>
+  <circle cx="696" cy="405" r="5" fill="#F59E0B"/>
+  <text x="730" y="410" font-family="Arial, sans-serif" font-size="11" fill="#F59E0B" text-anchor="middle">Planned</text>
+
+  <!-- ── ROW 7: Conversation History ── (planned) -->
+  <rect x="30" y="442" width="760" height="48" rx="6" fill="#141414" opacity="0.8"/>
+  <!-- icon: chat bubbles -->
+  <rect x="68" y="450" width="16" height="10" rx="3" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+  <rect x="76" y="458" width="16" height="10" rx="3" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="105" y="464" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#6B7280">Conversation History</text>
+  <text x="105" y="479" font-family="Arial, sans-serif" font-size="10" fill="#4B5563">Session-scoped local message log</text>
+  <text x="430" y="470" font-family="Arial, sans-serif" font-size="11" fill="#4B5563" text-anchor="middle">Keep chat thread across multiple exchanges without re-sending context each time</text>
+  <rect x="680" y="452" width="100" height="24" rx="12" fill="#1C1C1C"/>
+  <circle cx="696" cy="464" r="5" fill="#7C3AED"/>
+  <text x="730" y="469" font-family="Arial, sans-serif" font-size="11" fill="#A855F7" text-anchor="middle">In Progress</text>
+</svg>

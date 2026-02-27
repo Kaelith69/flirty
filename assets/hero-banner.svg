@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="260" viewBox="0 0 820 260">
+  <!-- Background -->
+  <rect width="820" height="260" fill="#1C1B1F"/>
+
+  <!-- Decorative heart-pulse waveform left -->
+  <polyline points="0,130 40,130 55,90 70,170 85,70 100,190 115,110 130,130 180,130"
+    fill="none" stroke="#7C3AED" stroke-width="2" opacity="0.5"/>
+
+  <!-- Decorative heart-pulse waveform right -->
+  <polyline points="640,130 690,130 705,90 720,170 735,70 750,190 765,110 780,130 820,130"
+    fill="none" stroke="#EC4899" stroke-width="2" opacity="0.5"/>
+
+  <!-- Floating particles / dots scattered -->
+  <circle cx="30"  cy="50"  r="3" fill="#EC4899" opacity="0.4"/>
+  <circle cx="90"  cy="210" r="2" fill="#22D3EE" opacity="0.4"/>
+  <circle cx="200" cy="30"  r="2" fill="#7C3AED" opacity="0.5"/>
+  <circle cx="600" cy="40"  r="3" fill="#EC4899" opacity="0.4"/>
+  <circle cx="720" cy="220" r="2" fill="#22D3EE" opacity="0.4"/>
+  <circle cx="790" cy="60"  r="2" fill="#7C3AED" opacity="0.5"/>
+  <circle cx="650" cy="190" r="3" fill="#EC4899" opacity="0.3"/>
+  <circle cx="150" cy="200" r="2" fill="#22D3EE" opacity="0.3"/>
+
+  <!-- Small hearts -->
+  <!-- heart at top-left area -->
+  <path d="M 230 55 C 230 48, 238 43, 244 50 C 250 43, 258 48, 258 55 C 258 65, 244 75, 244 75 C 244 75, 230 65, 230 55 Z"
+    fill="#EC4899" opacity="0.35" transform="scale(0.5) translate(220, 50)"/>
+  <!-- heart at top-right area -->
+  <path d="M 580 45 C 580 38, 588 33, 594 40 C 600 33, 608 38, 608 45 C 608 55, 594 65, 594 65 C 594 65, 580 55, 580 45 Z"
+    fill="#EC4899" opacity="0.35" transform="scale(0.5) translate(350, 30)"/>
+
+  <!-- Horizontal divider lines -->
+  <line x1="100" y1="195" x2="330" y2="195" stroke="#7C3AED" stroke-width="1" opacity="0.4"/>
+  <line x1="490" y1="195" x2="720" y2="195" stroke="#EC4899" stroke-width="1" opacity="0.4"/>
+
+  <!-- Main title: PLUTO -->
+  <text x="410" y="135" font-family="Georgia, serif" font-size="88" font-weight="900"
+    fill="url(#titleGrad)" text-anchor="middle" letter-spacing="8">PLUTO</text>
+
+  <!-- Tagline -->
+  <text x="410" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="400"
+    fill="#22D3EE" text-anchor="middle" letter-spacing="3" opacity="0.9">
+    GEMINI-POWERED FLIRTY &amp; WITTY REPLY GENERATOR
+  </text>
+
+  <!-- Subtitle / mode labels -->
+  <text x="275" y="215" font-family="Arial, sans-serif" font-size="11"
+    fill="#EC4899" text-anchor="middle" letter-spacing="2" opacity="0.8">💘 CUPID MODE</text>
+  <text x="410" y="215" font-family="Arial, sans-serif" font-size="11"
+    fill="#6B7280" text-anchor="middle" letter-spacing="2" opacity="0.7">⇄</text>
+  <text x="545" y="215" font-family="Arial, sans-serif" font-size="11"
+    fill="#7C3AED" text-anchor="middle" letter-spacing="2" opacity="0.8">🧠 G MAN MODE</text>
+
+  <!-- Flutter badge indicator bottom-right -->
+  <rect x="710" y="230" width="90" height="20" rx="10" fill="#22D3EE" opacity="0.15"/>
+  <text x="755" y="244" font-family="Arial, sans-serif" font-size="10"
+    fill="#22D3EE" text-anchor="middle" letter-spacing="1">Flutter · Dart</text>
+
+  <defs>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#EC4899"/>
+      <stop offset="50%"  stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+</svg>

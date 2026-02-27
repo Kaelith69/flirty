@@ -1,513 +1,322 @@
-<!-- Hero Banner -->
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220">
-  <defs>
-    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d0d1a"/>
-      <stop offset="50%" style="stop-color:#1e1040"/>
-      <stop offset="100%" style="stop-color:#0c1a2e"/>
-    </linearGradient>
-    <linearGradient id="heroTitle" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7C3AED"/>
-      <stop offset="50%" style="stop-color:#a78bfa"/>
-      <stop offset="100%" style="stop-color:#06B6D4"/>
-    </linearGradient>
-    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#06B6D4"/>
-      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-  <rect width="900" height="220" rx="16" fill="url(#heroBg)"/>
-  <!-- decorative orbits -->
-  <circle cx="80" cy="110" r="55" fill="none" stroke="#7C3AED" stroke-width="0.5" opacity="0.3"/>
-  <circle cx="80" cy="110" r="35" fill="none" stroke="#06B6D4" stroke-width="0.5" opacity="0.2"/>
-  <circle cx="820" cy="110" r="55" fill="none" stroke="#06B6D4" stroke-width="0.5" opacity="0.3"/>
-  <circle cx="820" cy="110" r="35" fill="none" stroke="#7C3AED" stroke-width="0.5" opacity="0.2"/>
-  <!-- stars -->
-  <circle cx="160" cy="30" r="1.5" fill="#06B6D4" opacity="0.6"/>
-  <circle cx="740" cy="45" r="1" fill="#a78bfa" opacity="0.7"/>
-  <circle cx="500" cy="20" r="1.5" fill="#06B6D4" opacity="0.5"/>
-  <circle cx="300" cy="190" r="1" fill="#7C3AED" opacity="0.6"/>
-  <circle cx="620" cy="195" r="1.5" fill="#06B6D4" opacity="0.5"/>
-  <!-- mode pills -->
-  <rect x="260" y="35" width="110" height="28" rx="14" fill="#7C3AED" opacity="0.25"/>
-  <text x="315" y="54" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#a78bfa">💘 CUPID</text>
-  <rect x="530" y="35" width="110" height="28" rx="14" fill="#06B6D4" opacity="0.2"/>
-  <text x="585" y="54" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#67e8f9">🧠 G MAN</text>
-  <!-- main title -->
-  <text x="450" y="125" font-family="Georgia, serif" font-size="80" font-weight="900"
-        text-anchor="middle" fill="url(#heroTitle)" letter-spacing="8" filter="url(#glow)">PLUTO</text>
-  <!-- accent line -->
-  <line x1="200" y1="140" x2="700" y2="140" stroke="url(#accentLine)" stroke-width="1.5"/>
-  <!-- subtitle -->
-  <text x="450" y="168" font-family="Arial, sans-serif" font-size="16"
-        text-anchor="middle" fill="#94a3b8" letter-spacing="3">AI-POWERED REPLY GENERATOR</text>
-  <!-- bottom badge -->
-  <rect x="355" y="183" width="190" height="24" rx="12" fill="#1e1040" stroke="#7C3AED" stroke-width="0.8"/>
-  <text x="450" y="199" font-family="Arial, sans-serif" font-size="11"
-        text-anchor="middle" fill="#06B6D4" letter-spacing="1">✦ Powered by Gemini 1.5 Flash ✦</text>
-</svg>
+  <img src="assets/hero-banner.svg" alt="Pluto – Gemini-powered flirty & witty reply generator" width="820"/>
 </p>
 
-# Pluto — AI Reply Generator
-
-> You know that moment when someone texts you something and your brain just... flatlines?  
-> Yeah. Pluto fixes that. It uses Google's **Gemini 1.5 Flash** to generate either a silky smooth
-> flirty pickup line **or** a razor-sharp witty comeback — in under two seconds.  
-> One switch. Two vibes. Zero social awkwardness. Probably.
-
----
-
-[![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart&logoColor=white)](https://dart.dev)
-[![Gemini API](https://img.shields.io/badge/Gemini-1.5_Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-7C3AED)](https://github.com/Kaelith69/flirty/releases)
-[![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Desktop-06B6D4)](https://flutter.dev/multi-platform)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-
----
-
-
-
-## 🌐 System Overview
-
-Pluto is a **Flutter cross-platform app** with exactly one job: take a message, feed it to the
-Gemini AI with the right personality prompt, and return something that will either make someone
-smile or make them question their life choices. The architecture is beautifully simple — basically
-three layers and a `.env` file standing between you and peak social performance.
-
-**Platforms supported:** Android · iOS · Web · Linux · macOS · Windows  
-**AI backend:** Google Gemini 1.5 Flash (REST API)  
-**State management:** Local `StatefulWidget` (no overkill providers here, just vibes and setState)
-
----
-
-## ✨ Features
-
-| Feature | What it actually does |
-|---|---|
-| 💘 **Cupid Mode** | Sends a flirty-framed prompt to Gemini, returns a romantic pickup line |
-| 🧠 **G Man Mode** | Sends a wit-framed prompt, returns a high-intellect clever reply |
-| ⚡ **Instant toggle** | Flips between modes live with a `SwitcherButton` — no restart needed |
-| 🔄 **Loading indicator** | `CircularProgressIndicator` so you know the AI is thinking, not ghosting |
-| 🛡️ **Error handling** | If the API fumbles, the UI tells you politely instead of silently dying |
-| 📱 **Responsive layout** | Full-width response card that doesn't care what screen size you're on |
-| 🔒 **Input cap** | 500-character limit on API requests — prevents accidental novel submissions |
-| 🌑 **Dark theme** | Because staring at white screens at night is a war crime |
-
----
-
-## 🗺️ Capability Visualization
+**Because sometimes you need a pickup line, and sometimes you need to sound like the smartest person in the room. Pluto handles both.**
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320">
-  <defs>
-    <linearGradient id="capBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f0f1a"/>
-      <stop offset="100%" style="stop-color:#1a0f2e"/>
-    </linearGradient>
-    <linearGradient id="cupidBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7C3AED"/>
-      <stop offset="100%" style="stop-color:#a78bfa"/>
-    </linearGradient>
-    <linearGradient id="gmanBar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#2563EB"/>
-      <stop offset="100%" style="stop-color:#06B6D4"/>
-    </linearGradient>
-  </defs>
-  <rect width="760" height="320" rx="14" fill="url(#capBg)" stroke="#7C3AED" stroke-width="0.5"/>
-  <text x="380" y="36" font-family="Arial, sans-serif" font-size="15" font-weight="bold"
-        text-anchor="middle" fill="#e2e8f0">CAPABILITY GRAPH</text>
-  <line x1="30" y1="44" x2="730" y2="44" stroke="#7C3AED" stroke-width="0.5" opacity="0.4"/>
-
-  <!-- Labels -->
-  <text x="30" y="82"  font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Romantic Charm</text>
-  <text x="30" y="122" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Wit &amp; Intellect</text>
-  <text x="30" y="162" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Response Speed</text>
-  <text x="30" y="202" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Error Recovery</text>
-  <text x="30" y="242" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Platform Coverage</text>
-  <text x="30" y="282" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Input Flexibility</text>
-
-  <!-- Cupid bars -->
-  <rect x="180" y="64"  width="340" height="18" rx="9" fill="url(#cupidBar)" opacity="0.9"/>
-  <rect x="180" y="104" width="160" height="18" rx="9" fill="url(#cupidBar)" opacity="0.5"/>
-  <rect x="180" y="144" width="280" height="18" rx="9" fill="url(#cupidBar)" opacity="0.9"/>
-  <rect x="180" y="184" width="300" height="18" rx="9" fill="url(#cupidBar)" opacity="0.9"/>
-  <rect x="180" y="224" width="320" height="18" rx="9" fill="url(#cupidBar)" opacity="0.9"/>
-  <rect x="180" y="264" width="300" height="18" rx="9" fill="url(#cupidBar)" opacity="0.9"/>
-
-  <!-- G Man bars -->
-  <rect x="180" y="64"  width="80"  height="18" rx="9" fill="url(#gmanBar)" opacity="0.7"/>
-  <rect x="180" y="104" width="360" height="18" rx="9" fill="url(#gmanBar)" opacity="0.9"/>
-  <rect x="180" y="144" width="280" height="18" rx="9" fill="url(#gmanBar)" opacity="0.9"/>
-  <rect x="180" y="184" width="300" height="18" rx="9" fill="url(#gmanBar)" opacity="0.9"/>
-  <rect x="180" y="224" width="320" height="18" rx="9" fill="url(#gmanBar)" opacity="0.9"/>
-  <rect x="180" y="264" width="300" height="18" rx="9" fill="url(#gmanBar)" opacity="0.9"/>
-
-  <!-- Legend -->
-  <rect x="520" y="270" width="14" height="14" rx="3" fill="url(#cupidBar)"/>
-  <text x="540" y="282" font-family="Arial, sans-serif" font-size="11" fill="#a78bfa">💘 Cupid Mode</text>
-  <rect x="620" y="270" width="14" height="14" rx="3" fill="url(#gmanBar)"/>
-  <text x="640" y="282" font-family="Arial, sans-serif" font-size="11" fill="#67e8f9">🧠 G Man Mode</text>
-</svg>
+  <a href="#features">Features</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#roadmap">Roadmap</a> •
+  <a href="#license">License</a>
 </p>
 
 ---
 
-## 🏗️ Architecture Diagram
+*Pluto started as an answer to a simple question: what if you could ask an AI to be charming on your behalf? Not a full chatbot — just a one-shot reply generator that commits to a bit. Cupid mode writes romantic pickup lines. G Man mode writes the kind of response that makes people think you've read too many books. You pick the persona; Gemini does the heavy lifting.*
+
+Pluto is a Flutter application that wraps the Google Gemini 1.5 Flash REST API with two distinct personality modes. Type anything, flip the toggle, hit send, and get back either a flirty one-liner or a wit-forward reply — instantly, with no conversation context to manage. It's a deliberate single-screen design: no chat history, no settings maze, no onboarding. The interesting part is that both modes are driven by the same model with radically different system prompts, and the app chrome (AppBar color) visually commits to whichever persona is active.
+
+---
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
-  <defs>
-    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f0f1a"/>
-      <stop offset="100%" style="stop-color:#1a0f2e"/>
-    </linearGradient>
-    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e1040"/>
-      <stop offset="100%" style="stop-color:#0c1a2e"/>
-    </linearGradient>
-    <linearGradient id="extGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1c2a1c"/>
-      <stop offset="100%" style="stop-color:#0a1a0a"/>
-    </linearGradient>
-  </defs>
-  <rect width="760" height="380" rx="14" fill="url(#archBg)" stroke="#7C3AED" stroke-width="0.5"/>
-  <text x="380" y="32" font-family="Arial, sans-serif" font-size="15" font-weight="bold"
-        text-anchor="middle" fill="#e2e8f0">ARCHITECTURE DIAGRAM</text>
-  <line x1="30" y1="42" x2="730" y2="42" stroke="#7C3AED" stroke-width="0.5" opacity="0.4"/>
-
-  <!-- main.dart -->
-  <rect x="280" y="58" width="200" height="52" rx="10" fill="url(#nodeGrad)" stroke="#7C3AED" stroke-width="1.5"/>
-  <text x="380" y="80" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle" fill="#a78bfa">main.dart</text>
-  <text x="380" y="98" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">loads .env → bootstrap</text>
-
-  <!-- arrow down -->
-  <line x1="380" y1="110" x2="380" y2="138" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <polygon points="375,135 385,135 380,145" fill="#7C3AED"/>
-
-  <!-- MyApp -->
-  <rect x="270" y="148" width="220" height="52" rx="10" fill="url(#nodeGrad)" stroke="#2563EB" stroke-width="1.5"/>
-  <text x="380" y="170" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle" fill="#60a5fa">MyApp</text>
-  <text x="380" y="188" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">MaterialApp · dark theme · routing</text>
-
-  <!-- arrow down -->
-  <line x1="380" y1="200" x2="380" y2="228" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <polygon points="375,225 385,225 380,235" fill="#2563EB"/>
-
-  <!-- HomeScreen -->
-  <rect x="240" y="238" width="280" height="52" rx="10" fill="url(#nodeGrad)" stroke="#06B6D4" stroke-width="1.5"/>
-  <text x="380" y="260" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle" fill="#67e8f9">HomeScreen</text>
-  <text x="380" y="278" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">StatefulWidget · UI state · toggle · input</text>
-
-  <!-- arrow down to ApiService -->
-  <line x1="380" y1="290" x2="380" y2="318" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <polygon points="375,315 385,315 380,325" fill="#06B6D4"/>
-
-  <!-- ApiService -->
-  <rect x="260" y="328" width="240" height="36" rx="10" fill="url(#nodeGrad)" stroke="#10b981" stroke-width="1.5"/>
-  <text x="380" y="352" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle" fill="#34d399">ApiService</text>
-
-  <!-- arrow right to Gemini -->
-  <line x1="500" y1="346" x2="560" y2="346" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <polygon points="557,341 557,351 567,346" fill="#10b981"/>
-
-  <!-- Gemini box -->
-  <rect x="567" y="322" width="160" height="48" rx="10" fill="url(#extGrad)" stroke="#10b981" stroke-width="1.2"/>
-  <text x="647" y="342" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#34d399">Gemini 1.5 Flash</text>
-  <text x="647" y="360" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">REST API · Google AI</text>
-
-  <!-- const.dart side node -->
-  <rect x="30" y="238" width="140" height="52" rx="10" fill="url(#nodeGrad)" stroke="#7C3AED" stroke-width="1" stroke-dasharray="5,3"/>
-  <text x="100" y="260" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#a78bfa">const.dart</text>
-  <text x="100" y="278" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">shared TextStyle helper</text>
-  <line x1="240" y1="264" x2="170" y2="264" stroke="#7C3AED" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
-</svg>
+  <img src="https://img.shields.io/badge/Flutter-3.x-7C3AED?style=flat-square&logo=flutter&logoColor=white" alt="Flutter 3.x"/>
+  <img src="https://img.shields.io/badge/Dart-≥3.0.6-22D3EE?style=flat-square&logo=dart&logoColor=white" alt="Dart ≥3.0.6"/>
+  <img src="https://img.shields.io/badge/Gemini-1.5_Flash-EC4899?style=flat-square&logo=google&logoColor=white" alt="Gemini 1.5 Flash"/>
+  <img src="https://img.shields.io/badge/Platforms-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Linux%20%7C%20macOS%20%7C%20Windows-A855F7?style=flat-square" alt="Platforms"/>
+  <img src="https://img.shields.io/badge/License-MIT-6B7280?style=flat-square" alt="MIT License"/>
 </p>
 
 ---
 
-## 🌊 Data Flow
+## System Overview
 
-<p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" width="760" height="200">
-  <defs>
-    <linearGradient id="flowBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f0f1a"/>
-      <stop offset="100%" style="stop-color:#1a0f2e"/>
-    </linearGradient>
-    <linearGradient id="flowLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7C3AED"/>
-      <stop offset="50%" style="stop-color:#06B6D4"/>
-      <stop offset="100%" style="stop-color:#10b981"/>
-    </linearGradient>
-  </defs>
-  <rect width="760" height="200" rx="14" fill="url(#flowBg)" stroke="#7C3AED" stroke-width="0.5"/>
-  <text x="380" y="28" font-family="Arial, sans-serif" font-size="14" font-weight="bold"
-        text-anchor="middle" fill="#e2e8f0">DATA FLOW</text>
-
-  <!-- Step nodes -->
-  <rect x="18"  y="60" width="100" height="70" rx="10" fill="#1e1040" stroke="#7C3AED" stroke-width="1.2"/>
-  <text x="68"  y="91" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#a78bfa">User</text>
-  <text x="68"  y="107" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">types message</text>
-  <text x="68"  y="121" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">+ picks mode</text>
-
-  <rect x="148" y="60" width="100" height="70" rx="10" fill="#1e1040" stroke="#2563EB" stroke-width="1.2"/>
-  <text x="198" y="91" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#60a5fa">HomeScreen</text>
-  <text x="198" y="107" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">validates input</text>
-  <text x="198" y="121" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">shows spinner</text>
-
-  <rect x="278" y="60" width="100" height="70" rx="10" fill="#1e1040" stroke="#06B6D4" stroke-width="1.2"/>
-  <text x="328" y="91" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#67e8f9">ApiService</text>
-  <text x="328" y="107" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">builds prompt</text>
-  <text x="328" y="121" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">HTTP POST</text>
-
-  <rect x="408" y="60" width="110" height="70" rx="10" fill="#1e1040" stroke="#10b981" stroke-width="1.2"/>
-  <text x="463" y="84" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#34d399">Gemini API</text>
-  <text x="463" y="100" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">1.5 Flash model</text>
-  <text x="463" y="114" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">generates reply</text>
-  <text x="463" y="128" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">returns JSON</text>
-
-  <rect x="548" y="60" width="100" height="70" rx="10" fill="#1e1040" stroke="#06B6D4" stroke-width="1.2"/>
-  <text x="598" y="91" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#67e8f9">Parse JSON</text>
-  <text x="598" y="107" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">extract text</text>
-  <text x="598" y="121" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">from candidates</text>
-
-  <rect x="668" y="60" width="82" height="70" rx="10" fill="#1e1040" stroke="#7C3AED" stroke-width="1.2"/>
-  <text x="709" y="91" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#a78bfa">Render</text>
-  <text x="709" y="107" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">display reply</text>
-  <text x="709" y="121" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#64748b">in UI card</text>
-
-  <!-- flow arrows -->
-  <line x1="118" y1="95" x2="145" y2="95" stroke="#7C3AED" stroke-width="1.5"/>
-  <polygon points="142,91 142,99 150,95" fill="#7C3AED"/>
-  <line x1="248" y1="95" x2="275" y2="95" stroke="#2563EB" stroke-width="1.5"/>
-  <polygon points="272,91 272,99 280,95" fill="#2563EB"/>
-  <line x1="378" y1="95" x2="405" y2="95" stroke="#06B6D4" stroke-width="1.5"/>
-  <polygon points="402,91 402,99 410,95" fill="#06B6D4"/>
-  <line x1="518" y1="95" x2="545" y2="95" stroke="#10b981" stroke-width="1.5"/>
-  <polygon points="542,91 542,99 550,95" fill="#10b981"/>
-  <line x1="648" y1="95" x2="665" y2="95" stroke="#06B6D4" stroke-width="1.5"/>
-  <polygon points="662,91 662,99 670,95" fill="#06B6D4"/>
-
-  <!-- return path -->
-  <path d="M 750 150 Q 750 175 380 175 Q 68 175 68 150" stroke="#7C3AED" stroke-width="1" fill="none" stroke-dasharray="4,3" opacity="0.5"/>
-  <polygon points="63,147 73,147 68,140" fill="#7C3AED" opacity="0.5"/>
-  <text x="380" y="170" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#7C3AED" opacity="0.7">response returned to UI</text>
-</svg>
-</p>
-
----
-
-## 🚀 Installation
-
-### Prerequisites
-
-| Tool | Minimum Version | Where to get it |
-|---|---|---|
-| Flutter | 3.0 | [flutter.dev](https://flutter.dev/docs/get-started/install) |
-| Dart | 3.0 | Bundled with Flutter |
-| Gemini API key | — | [aistudio.google.com](https://aistudio.google.com/) (free tier available) |
-
-### Step 1 — Clone
-
-```bash
-git clone https://github.com/Kaelith69/flirty.git
-cd flirty
-```
-
-### Step 2 — Install dependencies
-
-```bash
-flutter pub get
-```
-
-### Step 3 — Configure API key
-
-```bash
-cp .env.example .env
-```
-
-Open `.env` and drop your key in:
-
-```dotenv
-API_KEY=AIzaSy...your_real_key_here
-```
-
-> 🔑 The API key is free on Google AI Studio's generous free tier. No credit card required for
-> reasonable usage. Yes, really.
-
-### Step 4 — Run
-
-```bash
-# Mobile / emulator
-flutter run
-
-# Web
-flutter run -d chrome
-
-# Specific device
-flutter devices          # list available
-flutter run -d <device>
-```
-
----
-
-## 🎮 Usage
-
-1. **Open** the app.
-2. **Toggle** the switch at the top:
-   - ⬅️ **G MAN** — the AI puts on a monocle and delivers something clever
-   - ➡️ **CUPID** — the AI shoots its shot for you
-3. **Type** the message you want to respond to.
-4. **Tap** the ↑ send button (appears once you've typed something — no accidental blank submissions).
-5. **Read** the AI's reply in the response card.
-6. **Copy, use, profit** 😎
-
-### Example exchange
-
-```
-Input  : "You up?"
-Mode   : 💘 CUPID
-Output : "Only because the stars had to make room for someone as bright as you."
-
-Input  : "What's the meaning of life?"
-Mode   : 🧠 G MAN
-Output : "42, but the real answer is you're asking the wrong question."
-```
-
----
-
-## 📂 Project Structure
+Pluto is a single-screen Flutter app. The widget tree is intentionally shallow: `MyApp` → `HomeScreen` (StatefulWidget) → `_HomeScreenState`. State management is entirely local to `_HomeScreenState` — no `Provider`, no `Riverpod`, no `Bloc`. The API layer lives in `ApiService`, a static class that composes prompts, calls Gemini via `http.post`, and parses the JSON response. The `.env` file, loaded at startup via `flutter_dotenv`, is the only config surface.
 
 ```
 flirty/
-├── .env                     # Your API key lives here (gitignored)
-├── .env.example             # Template — safe to commit
-├── analysis_options.yaml    # Dart lint rules
-├── pubspec.yaml             # Dependencies + asset registration
-│
 ├── lib/
-│   ├── main.dart            # Boots the app, loads .env
-│   ├── const.dart           # Shared TextStyle helper (txtstyle)
+│   ├── main.dart          # App entry point; loads .env, mounts MyApp
+│   ├── const.dart         # Shared text styles (txtstyle)
 │   ├── screens/
-│   │   └── home_screen.dart # The whole UI + state machine
+│   │   └── home_screen.dart  # Single screen: toggle + input + response
 │   └── services/
-│       └── api_service.dart # HTTP → Gemini → parsed text
-│
-├── test/
-│   └── widget_test.dart     # Widget smoke tests
-│
-├── android/                 # Android platform scaffolding
-├── ios/                     # iOS platform scaffolding
-├── web/                     # Web platform scaffolding
-├── linux/                   # Linux platform scaffolding
-├── macos/                   # macOS platform scaffolding
-└── windows/                 # Windows platform scaffolding
+│       └── api_service.dart  # Gemini REST client + prompt construction
+├── .env                   # API_KEY (gitignored)
+├── .env.example           # Template for .env
+├── pubspec.yaml           # Dependencies and Flutter config
+├── android/               # Android platform project
+├── ios/                   # iOS platform project
+├── web/                   # Web platform project
+├── linux/                 # Linux platform project
+├── macos/                 # macOS platform project
+├── windows/               # Windows platform project
+└── test/                  # Flutter test directory
+```
+
+See the architecture diagram below for how components connect.
+
+---
+
+## Features
+
+| Feature | What it actually does |
+|---|---|
+| 💘 **Cupid Mode** | Sends a Gemini prompt requesting a romantic pickup line for your input text; AppBar turns purple |
+| 🧠 **G Man Mode** | Sends a Gemini prompt requesting a witty, high-intellect reply; AppBar turns green |
+| ⚡ **Mode Toggle** | A `SwitcherButton` widget that instantly flips the active mode and rebuilds the AppBar color in one `setState` call |
+| 🔄 **Loading Indicator** | Shows a `CircularProgressIndicator` while the API call is in flight; send button disappears so you can't double-send |
+| 🛡️ **Input Guard** | Silently truncates input to 500 characters before sending; the send button is hidden until the text field has content |
+| 📱 **Cross-Platform** | One codebase, six deployment targets: Android, iOS, Web, Linux, macOS, Windows — no platform-specific UI branches |
+| 🌑 **Material 3 Dark Theme** | `ThemeData.dark(useMaterial3: true)` — the UI defaults to dark mode and does not offer a toggle (this is not a bug) |
+| 🔑 **dotenv Config** | `API_KEY` is read from a `.env` file at startup; missing key surfaces as a readable error in the response card, not a crash |
+
+---
+
+## Capability Visualization
+
+<p align="center">
+  <img src="assets/capabilities.svg" alt="Pluto capability matrix" width="820"/>
+</p>
+
+---
+
+## Architecture
+
+<p align="center">
+  <img src="assets/architecture.svg" alt="Pluto system architecture" width="820"/>
+</p>
+
+Pluto runs entirely on the Flutter single-thread model — the main isolate handles UI and the `async`/`await` Dart concurrency model handles the API call without blocking. There are no background isolates, no platform channels, and no native plugins. `_HomeScreenState` owns all mutable state: the toggle boolean (`_switchValue`), the text controller, the loading flag, and the current response string. When `_sendRequest()` fires, it flips `_isLoading` to true, awaits `ApiService.generateResponse()`, then calls `setState` with the result (or the error message).
+
+The decision to use a static `ApiService` rather than a service locator or DI container was deliberate: the app has one API and one screen. Adding a layer of indirection would be architecture for its own sake. The API key is fetched from `flutter_dotenv` on every call rather than cached in a field — this makes the key reloadable without a hot restart in development, and it's a negligible performance cost for an app with no SLA.
+
+---
+
+## Data Flow
+
+<p align="center">
+  <img src="assets/data-flow.svg" alt="Pluto data flow" width="820"/>
+</p>
+
+Primary path from keypress to rendered response:
+
+```
+User types → TextField (TextEditingController)
+  → send button appears (setState: _isInputEmpty = false)
+  → tap send → _sendRequest()
+    → setState(_isLoading = true) → CircularProgressIndicator shown
+    → input truncated to 500 chars
+    → mode check: flirtyMode=true → "Give a single flirty reply…" prompt
+                  flirtyMode=false → "Give a reply that sounds like a highly intelligent…" prompt
+    → http.post(gemini endpoint, body=JSON, headers=Content-Type)
+      → 200 OK → parse candidates[0].content.parts[0].text
+        → setState(_responseText = result, _isLoading = false)
+      → non-200 → setState(_responseText = "Error: …", _isLoading = false)
 ```
 
 ---
 
-## 📊 Performance Stats
+## Installation
+
+### Prerequisites
+
+1. **Flutter SDK** (≥ 3.x) — install from [flutter.dev](https://flutter.dev/docs/get-started/install). Flutter ships with Dart; you don't install them separately.
+2. **A Gemini API key** — get one free at [aistudio.google.com](https://aistudio.google.com/). The free tier is sufficient for personal use.
+
+### Steps
+
+1. **Clone the repo**
+
+   ```bash
+   git clone https://github.com/Kaelith69/flirty.git
+   cd flirty
+   ```
+
+2. **Create your `.env` file** from the provided template
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   Then open `.env` and replace `YOUR_GEMINI_API_KEY_HERE` with your actual key:
+
+   ```
+   API_KEY=AIza...
+   ```
+
+   > The `.env` file is gitignored. Never commit a real API key.
+
+3. **Fetch Flutter dependencies**
+
+   ```bash
+   flutter pub get
+   ```
+
+   This downloads `http` (HTTP client), `google_fonts` (Playfair Display + Roboto), `switcher_button` (mode toggle widget), `flutter_dotenv` (reads `.env`), and `cupertino_icons`.
+
+4. **Run the app**
+
+   ```bash
+   # Pick your target:
+   flutter run                   # connected Android/iOS device or emulator
+   flutter run -d chrome         # web
+   flutter run -d linux          # Linux desktop
+   flutter run -d macos          # macOS desktop
+   flutter run -d windows        # Windows desktop
+   ```
+
+### Platform-specific notes
+
+| Platform | Requirement |
+|---|---|
+| Android | Android SDK, emulator or physical device |
+| iOS | Xcode 14+ on macOS; physical device or Simulator |
+| Web | Chrome (or any modern browser with `flutter run -d web-server`) |
+| Linux | `clang`, `cmake`, `ninja-build`, `pkg-config`, `libgtk-3-dev` |
+| macOS | Xcode 14+ |
+| Windows | Visual Studio 2022 with "Desktop development with C++" workload |
+
+---
+
+## Usage
+
+1. Launch the app. You'll see the **Pluto** header and the **G MAN ↔ CUPID** toggle.
+
+2. **Pick your mode:**
+   - Slide the toggle to **CUPID** (purple AppBar) for a flirty pickup line.
+   - Leave it at **G MAN** (green AppBar) for a witty intellectual reply.
+
+3. **Type your message** in the text field at the bottom. The send button appears once you've typed something.
+
+4. Tap the **↑ arrow button**. A spinner appears while Gemini processes.
+
+5. Your AI-crafted reply appears in the response card. The text field clears automatically.
+
+6. Repeat as needed. Each request is independent — there's no conversation context carried forward.
+
+> **Pro tip:** Cupid mode works best with something vague or abstract ("I like rainy days"). The more mundane your input, the funnier the pickup line Gemini invents to justify it.
+
+---
+
+## Project Structure
+
+```
+flirty/
+├── 📄 main.dart            # Boots the app; loads .env; mounts MaterialApp
+├── 📄 const.dart           # txtstyle() — the Roboto/24px/w400 text style
+├── 📦 screens/
+│   └── 📄 home_screen.dart # Everything the user sees; all state lives here
+├── 📦 services/
+│   └── 📄 api_service.dart # Static Gemini client; prompt builder; response parser
+├── 🔒 .env                 # Your API key — never commit this
+├── 📋 .env.example         # Safe template to commit
+├── 📋 pubspec.yaml         # Flutter/Dart deps; SDK constraints; asset registration
+├── 📋 pubspec.lock         # Locked dep tree — commit this
+├── 📋 CHANGELOG.md         # Release notes
+├── 📋 CONTRIBUTING.md      # Contribution guide
+├── 📋 SECURITY.md          # Security disclosure policy
+├── 📁 android/             # Android platform project (generated)
+├── 📁 ios/                 # iOS platform project (generated)
+├── 📁 web/                 # Web platform project (generated)
+├── 📁 linux/               # Linux platform project (generated)
+├── 📁 macos/               # macOS platform project (generated)
+├── 📁 windows/             # Windows platform project (generated)
+└── 📁 test/                # flutter_test directory
+```
+
+---
+
+## Performance Stats
 
 <p align="center">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" width="760" height="200">
-  <defs>
-    <linearGradient id="statsBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f0f1a"/>
-      <stop offset="100%" style="stop-color:#1a0f2e"/>
-    </linearGradient>
-  </defs>
-  <rect width="760" height="200" rx="14" fill="url(#statsBg)" stroke="#7C3AED" stroke-width="0.5"/>
-  <text x="380" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold"
-        text-anchor="middle" fill="#e2e8f0">PERFORMANCE &amp; STATS</text>
-  <line x1="30" y1="40" x2="730" y2="40" stroke="#7C3AED" stroke-width="0.5" opacity="0.4"/>
-
-  <!-- stat cards -->
-  <rect x="30"  y="55" width="130" height="120" rx="12" fill="#1e1040" stroke="#7C3AED" stroke-width="1"/>
-  <text x="95"  y="100" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#a78bfa">~2s</text>
-  <text x="95"  y="120" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">Avg. response</text>
-  <text x="95"  y="134" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">time (Gemini)</text>
-  <text x="95"  y="155" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#7C3AED">LATENCY</text>
-
-  <rect x="178" y="55" width="130" height="120" rx="12" fill="#1e1040" stroke="#2563EB" stroke-width="1"/>
-  <text x="243" y="100" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#60a5fa">500</text>
-  <text x="243" y="120" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">Max chars per</text>
-  <text x="243" y="134" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">API request</text>
-  <text x="243" y="155" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#2563EB">INPUT CAP</text>
-
-  <rect x="326" y="55" width="130" height="120" rx="12" fill="#1e1040" stroke="#06B6D4" stroke-width="1"/>
-  <text x="391" y="100" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#67e8f9">6</text>
-  <text x="391" y="120" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">Platforms</text>
-  <text x="391" y="134" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">supported</text>
-  <text x="391" y="155" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#06B6D4">REACH</text>
-
-  <rect x="474" y="55" width="130" height="120" rx="12" fill="#1e1040" stroke="#10b981" stroke-width="1"/>
-  <text x="539" y="100" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#34d399">2</text>
-  <text x="539" y="120" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">AI personas</text>
-  <text x="539" y="134" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">(Cupid / G Man)</text>
-  <text x="539" y="155" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#10b981">MODES</text>
-
-  <rect x="622" y="55" width="108" height="120" rx="12" fill="#1e1040" stroke="#7C3AED" stroke-width="1"/>
-  <text x="676" y="100" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#a78bfa">MIT</text>
-  <text x="676" y="120" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">Open source</text>
-  <text x="676" y="134" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#64748b">license</text>
-  <text x="676" y="155" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#7C3AED">LICENSE</text>
-</svg>
+  <img src="assets/stats.svg" alt="Pluto project stats" width="820"/>
 </p>
 
 ---
 
-## 🔒 Privacy
+## Privacy
 
-Pluto is refreshingly straightforward here:
+Pluto sends the text you type directly to the Google Gemini API. Google's standard data handling policies apply to anything sent to that API — review them at [ai.google.dev/terms](https://ai.google.dev/terms).
 
-- **No user accounts.** No sign-in, no profiles, no tracking.
-- **No local data storage.** Nothing is persisted between sessions.
-- **API calls go to Google.** Your input text is sent to Google's Gemini API. Google's privacy
-  policy governs what happens on their end — check [ai.google.dev](https://ai.google.dev) for details.
-- **Your API key stays on your device.** It lives in `.env`, loaded at runtime, never sent anywhere
-  except as an HTTP header in requests to Google's servers.
-- **The `.env` file is gitignored** by the `.env.example` pattern — don't commit your real key.
+**Pluto itself:**
+- Does not collect, log, or store any user input or AI responses.
+- Does not use analytics, crash reporting, or any third-party telemetry SDK.
+- Does not make any network requests except the single `POST` to `generativelanguage.googleapis.com`.
+- Does not store your API key anywhere except the local `.env` file you control.
 
-> tl;dr — the only "data" leaving your device is the text you type + your API key header, going
-> directly to Google. Pluto itself stores nothing.
+If you're not comfortable with your text being sent to Google's API, don't use the app. There's no offline mode.
 
 ---
 
-## 🗺️ Future Roadmap
+## Roadmap
 
-Things that could happen if caffeine levels stay high enough:
+### Core UX
+- [x] Cupid mode (flirty pickup line)
+- [x] G Man mode (witty reply)
+- [x] Mode toggle with AppBar color feedback
+- [x] Loading state with spinner
+- [x] Error surfacing in response card
+- [ ] Copy-to-clipboard on response card
+- [ ] Regenerate button (get a fresh reply for the same input)
 
-- [ ] 🎨 Theming / color scheme picker
-- [ ] 📋 Copy-to-clipboard button on responses
-- [ ] 🔁 "Try again" / regenerate button
-- [ ] 📜 Conversation history (local, ephemeral)
-- [ ] 🌐 Localization / multi-language support
-- [ ] 🎭 More AI personas beyond Cupid and G Man
-- [ ] ⚙️ Adjustable tone/temperature slider
-- [ ] 🧪 Better test coverage (widget + integration tests)
+### Conversation
+- [ ] Session-scoped conversation history
+- [ ] Clear history button
 
-PRs for any of these are very welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+### Personas
+- [ ] More AI personas beyond Cupid and G Man
+- [ ] Tone/temperature slider exposed in UI
+
+### Platform
+- [ ] App icon (all platforms)
+- [ ] Standalone build instructions (APK, IPA, MSIX, AppImage)
+- [ ] CI/CD pipeline
 
 ---
 
-## 📄 License
+## Packaging
 
-MIT — do whatever you want with it, just don't sue anyone.
-See [LICENSE](LICENSE) for the legal boilerplate.
+To build a standalone binary for distribution:
+
+```bash
+# Android APK
+flutter build apk --release
+
+# iOS IPA (requires Xcode and Apple Developer account)
+flutter build ipa
+
+# Web (outputs to build/web/)
+flutter build web
+
+# macOS app bundle
+flutter build macos --release
+
+# Windows MSIX
+flutter build windows --release
+
+# Linux
+flutter build linux --release
+```
+
+Release artifacts land in `build/<platform>/`. The `.env` file is bundled as a Flutter asset — make sure your API key is present before building a release, or the app will show an error on first use.
 
 ---
 
-<p align="center">
-  Made with 💜 and way too much caffeine by <a href="https://github.com/Kaelith69">Kaelith69</a>
-  <br/><br/>
-  <em>"Why do programmers prefer dark mode?"</em><br/>
-  <strong>Because light attracts bugs 🐛 — and we've got enough of those already.</strong>
-</p>
+## Contributing
+
+PRs are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
+
+---
+
+## Security
+
+To report a vulnerability, follow the process in [SECURITY.md](SECURITY.md).
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE). Built by [@Kaelith69](https://github.com/Kaelith69).
